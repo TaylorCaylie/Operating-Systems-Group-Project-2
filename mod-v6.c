@@ -19,7 +19,7 @@ main() {
         if(strcmp(command, "q\n") == 0){ //if user wants to quit then exit out of loop and program
             printf("Exiting...");
             q = 0;
-        }else if(strstr(command, "openfs") != NULL){ //open the file that contains info about file system
+        }else if(strstr(command, "openfs") != NULL){ //open the file that represents the disk drive
             
 
         }else if(strstr(command, "initfs")!= NULL){

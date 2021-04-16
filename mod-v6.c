@@ -9,6 +9,8 @@ main() {
     size_t nlines = 0;
     char a[1800] = ""; 
     char command[100]; //command from user input inialization 
+    char* open[2];
+    int i;
     printf("--Command Options-- \n q to quit \n openfs file_name\n initfs n1 n2\n count-free\n" );
     int q = 1; //q is the quit command - part of the while loop condition
 
@@ -20,7 +22,17 @@ main() {
             printf("Exiting...");
             q = 0;
         }else if(strstr(command, "openfs") != NULL){ //open the file that represents the disk drive
-            
+            char* token = strtok(command, " ");
+            i=0; //access indices 
+            while(token!= NULL){ //parce the input to get filename
+                open[i++] = token;
+                token = strtok(NULL, " ");
+            } //the filename is in open[1]
+
+            // -----testing-----
+            // for(i=0; i< 2; ++i){ 
+            //     printf("%s\n", open[i]);
+            // }
 
         }else if(strstr(command, "initfs")!= NULL){
         

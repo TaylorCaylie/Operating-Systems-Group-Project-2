@@ -4,7 +4,7 @@
 
 // This program simulates features of the v6 file system (add more details later)
 
-main() {
+int main(int argc, char *argv[]) {
     FILE *filesys = NULL; //initialize file input
     size_t nlines = 0;
     char a[1800] = ""; 
